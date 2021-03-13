@@ -1,0 +1,72 @@
+<div class="home-section container-fluid d-flex p-0">
+
+    <div class="left-side">
+        <div class="content">
+            <div class="heading">
+                <h2>We make it Super Simple</h2>
+            </div>
+            <span class="underline"></span>
+            <div class="image-div">
+                <img src="../../../assets/imgs/collect_img-video.png" alt="Video">
+            </div>
+        </div>
+    </div>
+    <div class="right-side d-flex align-items-center justify-content-center">
+        <div class="right-side-form-container1">
+            <mat-card class="result">
+                <div class="text-center heading mb-5">Eligibility Calculator</div>
+                <label class="sub-heading mt-2" for="income">Monthly Income</label>
+                <div class="heading-value">₹ {{income}}</div>
+                <mat-slider class="w-100"  (input)="updateIncome($event)" step="5" min="100000" max="300000">
+                </mat-slider>
+                <div class="row counting">
+                    <div class="col-6">
+                        100000
+                    </div>
+                    <div class="col-6 d-flex justify-content-end">
+                        300000
+                    </div>
+                </div>
+
+                <label class="sub-heading mt-3" for="expense">Monthly Expense</label>
+                <div class="heading-value">₹ {{expense}}</div>
+                <mat-slider class="w-100" (input)="updateExpense($event)" step="5" min="0" max="1000000">
+                </mat-slider>
+                <div>
+                    <label class="sub-heading w-100" for="tenure">Repayment Tenure</label>
+                    <!-- <mat-form-field class="w-100"> -->
+                    <mat-select class="w-100 select-month" name="monthString"
+                        placeholder="Select Tenure">
+                        <mat-option [value]="'6month'">6 Months</mat-option>
+                        <mat-option [value]="'12month'">12 Months</mat-option>
+                        <mat-option [value]="'18month'">18 Months</mat-option>
+                    </mat-select>
+                    <!-- </mat-form-field> -->
+                </div>
+                <div class="d-flex mt-4">
+                    <div class="col-9 pl-0">
+                        <label class="sub-heading w-100" for="loan">Do you have any existing loans?</label>
+                    </div>
+                    <div class="col-3 pr-0 d-flex justify-content-end">
+                        <mat-slide-toggle></mat-slide-toggle>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <label class="sub-heading w-100" for="loan">EMI of existing loan (optional)</label>
+                    <input placeholder="₹ 15000" type="text" class="form-control">
+                </div>
+            </mat-card>
+        </div>
+        <div class="right-side-form-container2 d-flex justify-content-center align-items-center ml-2">
+            <div class="text-center">
+               <div class="right-heading">Loan Amount</div> 
+               <div class="right-sub-heading">₹ 100000</div> 
+               <div class="right-heading mt-3">Your EMI will be</div> 
+               <div class="right-sub-heading">₹ 15000</div> 
+               <div class="d-flex justify-content-center mt-1">
+                   <button class="get-money-button" mat-raised-button color="primary">Get Money</button>
+               </div>
+            </div>
+        </div>
+    </div>
+</div>

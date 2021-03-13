@@ -1,0 +1,38 @@
+<div class="bussiness-content d-flex">
+
+    <div class="left-content  d-flex ">
+        <div class="left-card d-flex flex-column">
+            <div class="card custom-card" *ngFor =" let leftContent of leftContentArray">
+                <div class="card-body">
+                    <div class="image-div">
+                        <img [src]="leftContent.image" alt="card-image">
+                    </div>
+                    <h4 class="heading">{{leftContent.heading}}</h4>
+                    <span class="text">{{leftContent.content}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="right-card d-flex flex-column">
+            <div class="card custom-card" *ngFor =" let rightContent of rightContentArray">
+                <div class="card-body">
+                    <div class="image-div">
+                        <img [src]="rightContent.image" alt="card-image">
+                    </div>
+                    <h4 class="heading">{{rightContent.heading}}</h4>
+                    <span class="text">{{rightContent.content}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right-content">
+        <div class="heading">
+            <h2>Boost your business with Open</h2>
+        </div>
+        <span class="under-line"></span>
+        <p class="sub-title">Get your hands on a term loan that’s crafted for your business</p>
+        <button class="btn custom-btn">
+            Get an Open Account
+        </button>
+    </div>
+   
+</div>
